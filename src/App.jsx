@@ -33,6 +33,7 @@ function App() {
       try {
         const res = await fetch(url)
         const apiData = await res.json()
+        console.log("🔍 APOD response:", apiData);
         localStorage.setItem(localKey, JSON.stringify(apiData))
         setData(apiData)
         console.log('Fetched from API today')
